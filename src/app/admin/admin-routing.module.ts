@@ -12,14 +12,6 @@ const routes: Routes =[
   loadChildren:()=>import('../admin/customer/customer.module').then((m)=>m.CustomerModule)}]
 }
 ];
-// {
-//   path:'header',
-//   component:HeaderComponent
-// },
-// {
-//   path:'side-bar',
-//   component:SideBarComponent
-// },
 
 @NgModule({
   imports: [RouterModule.forChild(routes)], 
