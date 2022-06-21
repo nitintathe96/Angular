@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand p-1" href="#">Data Binding</a>
+  <div class="ms-auto p-3 d-flex">
+    <img src="../../assets/user-logo.jpg" alt="" width="50px" height="50px">
+  <div>
+    <span>Username:{{user}}</span> <br>
+    <span>Email:{{email}}</span>
+  </div>
+</div>
+</nav>   
+<div class="container-fluid d-flex">
+  <div class="age ">
+    <div class="mb-3">
+      <label class="form-label" >Select Date of Birth</label>
+      <input type="date" class="form-control" id="age" name="age" [(ngModel)]="age"><br>
+      <button type="submit" class="btn btn-primary" (click)="ageCalculator()">Calculate age</button>
+      <br>
+      <h4 [style.color]= "(showAge < 18)? red:green">age is :{{showAge}}</h4>
+    </div>
+  </div>
+  <div class="form ">
+     <form >
+      <fieldset>
+     <legend>Profile:</legend>
+        <div class="mb-3">
+          <label for="fname-" class="form-label" >First Name</label>
+          <input type="text" class="form-control" name="fname" [(ngModel)]="fname" >
+        </div>
+        <div class="mb-3">
+          <label for="lname" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lname" name="lname" [(ngModel)]="lname">
+        </div>
+        <div class="mb-3">
+          <label for="last-name" class="form-label">User Name</label>
+          <input type="text" class="form-control" id="username" name="user" [(ngModel)]="user">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" [(ngModel)]="email">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="add_data()">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+</div>
