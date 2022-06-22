@@ -17,6 +17,7 @@ export class FormComponent implements OnInit {
   showAge:any;
   green:string='green';
   red:string='red';
+  image='../../assets/user-logo.jpg'
   add_data(){
 
     alert('First Name: '+this.fname+'Last Name: '+this.lname+' '+'Email: '+this.email+'  '+'User Name: '+this.user);
